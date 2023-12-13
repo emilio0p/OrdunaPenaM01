@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F2F"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
+
+        <TextView
+            android:id="@+id/tituloContador"
+            android:layout_width="wrap_content"
+            android:layout_height="125dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="CONTADOR"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+
+        <TextView
+            android:id="@+id/numeroContador"
+            android:layout_width="match_parent"
+            android:layout_height="374dp"
+            android:fontFamily="@font/poppins_thin"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="200sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1B1B1B"
+                android:fontFamily="@font/poppins_bold"
+                android:text="+"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                app:cornerRadius="18dp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1B1B1B"
+                android:fontFamily="@font/poppins_medium"
+                android:text="RESET"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                app:cornerRadius="18dp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1B1B1B"
+                android:fontFamily="@font/poppins_bold"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                app:cornerRadius="18dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:shadowColor="#ACABAB"
+        android:text="By emilio_orduna"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
