@@ -7,20 +7,37 @@
     android:background="#2F2F2F"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="54dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4A4A4A"
+        android:onClick="volver"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:icon="@android:drawable/ic_media_rew"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="20dp">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="48dp">
 
         <TextView
             android:id="@+id/tituloContador"
             android:layout_width="wrap_content"
             android:layout_height="125dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="60dp"
             android:fontFamily="@font/poppins_extrabold"
             android:text="CONTADOR"
             android:textColor="#FFFFFF"
@@ -89,7 +106,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtCreatedBy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
