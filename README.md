@@ -75,7 +75,7 @@ public void iniciarSesion(View view) {
 ```
 
 
-## Recursos
+## Recursos utilizados
 
 - [Guía de Diseño de Android](https://developer.android.com/design)
 - [Documentación de Layouts en Android](https://developer.android.com/guide/topics/ui/declaring-layout)
