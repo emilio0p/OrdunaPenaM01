@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/navigation_home"
+            android:title="Inicio"
+            android:icon="@drawable/ic_home" />
+        <item
+            android:id="@+id/navigation_counter"
+            android:title="Contador"
+            android:icon="@drawable/ic_counter" />
+        <item
+            android:id="@+id/navigation_exit"
+            android:title="Salir"
+            android:icon="@drawable/ic_exit" />
+</menu>

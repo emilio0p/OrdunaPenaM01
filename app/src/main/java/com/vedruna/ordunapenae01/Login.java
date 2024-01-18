@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
         if (user.getText().toString().equals("admin") && pass.getText().toString().equals("admin")){
             mensaje.setText("");
             String usuario = user.getText().toString();
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, FragmentsActivity.class);
             intent.putExtra("user", usuario);
             startActivity(intent);
         } else {

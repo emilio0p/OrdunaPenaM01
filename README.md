@@ -74,6 +74,76 @@ public void iniciarSesion(View view) {
     }
 ```
 
+# Ejercicio 03: Fragments y contador funcional
+
+## Enunciado
+
+Cambia el proyecto para que el segundo activity en vez de ser el contador sea un activity con un FrameLayout en el que se verán los diferentes fragments (mínimo home, contador, salir) y por otra parte una barra de navegación con la que podamos viajar entre los diferentes fragments.
+
+## Pantalla 1
+La pantalla de login sigue igual, apareciendo la primera y comprobando que el usuario y la contraseña sean admin, de lo contrario no se podría acceder a la siguiente pantalla.
+
+![Captura pantalla 1](https://i.imgur.com/QHnlOAy.png)
+
+## Pantalla 2
+Esta pantalla se trata del `HomeFragment`, es el primer fragment que se muestra. Como se puede observar en la parte inferior de la pantalla la aplicación dispone de un menú de navegación `BottomNavigationView` el cual cuenta con 3 botones "Inicio, Contador y Salir". Cada uno de estos botones representa un `fragment`.
+
+![Captura pantalla 2](https://i.imgur.com/aGSTnoN.png)
+
+# Pantalla 3
+
+Esta pantalla se trata del `CounterFragment`. Este `fragment` representa el activity creado anteriormente del contador. La única diferencia es que en este caso sigue manteniedo la barra de navegación inferior y ya el contador es funcional.
+
+![Captura pantalla 3](https://i.imgur.com/bE1Re6M.png)
+
+# Pantalla 4
+
+Esta pantalla se trata del `ExitFragment`. Este `fragment` representa una pantalla de salida de la aplicación.
+
+![Captura pantalla 4](https://i.imgur.com/B7nd8SX.png)
+
+## Descripción del ejercicio 
+
+El ejercicio consiste en realizar modificaciones del proyecto Android para transformar el segundo Activity, que inicialmente representa un contador, en una nueva Activity que aloje un FrameLayout. Este FrameLayout se utilizará para mostrar diferentes fragments, entre los cuales se deben incluir al menos tres: "home", "contador" y "salir". Además, se debe implementar una barra de navegación que permita cambiar entre estos fragments de manera intuitiva.
+
+Para lograr esto, se deben realizar ajustes en el diseño de la nueva Activity para alojar el FrameLayout y configurar la barra de navegación. Además, se deben crear los fragments correspondientes con sus respectivos diseños y funcionalidades. La barra de navegación deberá ser capaz de manejar la transición entre los fragments, proporcionando una experiencia de usuario fluida y accesible.
+
+
+### Lógica contador funcional
+
+Este código Java representa un fragmento en Android que se infla con un diseño específico (fragment_counter.xml). El fragmento contiene un contador y tres botones que permiten realizar operaciones (sumar, restar y restablecer) en el contador. Los métodos sumar, restar, reset y actualizarNumero se utilizan para manejar las operaciones y actualizar la interfaz de usuario en consecuencia.
+
+- Incrementar el valor del contador y actualizar la interfaz de usuario.
+```java
+private void sumar() {
+    contadorValue++;
+    actualizarNumero();
+}
+```
+
+- Decrementar el valor del contador y actualizar la interfaz de usuario.
+```java
+private void restar() {
+    contadorValue--;
+    actualizarNumero();
+}
+```
+
+- Establecer el valor del contador en cero y actualizar la interfaz de usuario.
+```java
+private void reset() {
+    contadorValue = 0;
+    actualizarNumero();
+}
+```
+
+- Actualizar el TextView que muestra el número del contador con el valor actual.
+```java
+private void actualizarNumero() {
+    numeroContador.setText(String.valueOf(contadorValue));
+}
+```
+
 
 ## Recursos utilizados
 
