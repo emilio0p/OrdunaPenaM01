@@ -29,6 +29,8 @@ public class FragmentsActivity extends AppCompatActivity {
                 navController.navigate(R.id.counterFragment);
             } else if (item.getItemId() == R.id.navigation_exit) {
                 navController.navigate(R.id.exitFragment);
+            } else if (item.getItemId() == R.id.navigation_api){
+                navController.navigate(R.id.apiFragment);
             }
             return true;
         });

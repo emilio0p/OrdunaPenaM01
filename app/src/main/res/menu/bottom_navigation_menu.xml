@@ -8,8 +8,16 @@
             android:id="@+id/navigation_counter"
             android:title="Contador"
             android:icon="@drawable/ic_counter" />
+
+        <item
+            android:id="@+id/navigation_api"
+            android:title="API"
+            android:icon="@drawable/ic_api" />
+
         <item
             android:id="@+id/navigation_exit"
             android:title="Salir"
             android:icon="@drawable/ic_exit" />
+
+
 </menu>

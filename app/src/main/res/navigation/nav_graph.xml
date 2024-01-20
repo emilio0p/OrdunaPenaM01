@@ -20,10 +20,18 @@
         <action
             android:id="@+id/action_homeFragment_to_exitFragment"
             app:destination="@id/exitFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_apiFragment"
+            app:destination="@id/apiFragment" />
     </fragment>
     <fragment
         android:id="@+id/exitFragment"
         android:name="com.vedruna.ordunapenae01.ExitFragment"
         android:label="fragment_exit"
         tools:layout="@layout/fragment_exit" />
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.vedruna.ordunapenae01.ApiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" />
 </navigation>

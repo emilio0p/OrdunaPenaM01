@@ -145,6 +145,116 @@ private void actualizarNumero() {
 ```
 
 
+# Ejercicio 04: Consumir API en el Log
+
+## Enunciado
+
+Añade un Fragment mas que se llame API y sigue el tutorial (para la parte del consumo de la API) proporcionado para consumir un API con android(en esta entrega no tendrás que reflejar los resultado en la interfaz gráfica, solo en el log). Por otro lado crea un microservicio con una sola entidad.
+
+## Pantalla
+Nuevo fragment creado para que en el momento en el que se acceda se consuma la api y muestre los resultados por la consola de Logs.
+
+![Captura pantalla 1](https://i.imgur.com/l8DQlwL.png)
+
+### Resultados de la API
+![Resultados API](https://i.imgur.com/sYvtsg0.png)
+
+## Modelado Entidad-Interfaz
+
+- ### Entidad
+Esta entidad se encarga de modelar el resultado obtenido de la API.
+```java /**
+ * Clase que representa un producto.
+ */
+package com.vedruna.ordunapenae01.model;
+
+public class Producto {
+    // Atributos
+    private Long id;
+    private String nombre;
+    private float precio;
+
+    // Constructor
+    public Producto(Long id, String nombre, float precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    // Métodos de acceso (Getters y Setters)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    // Método toString para representación en cadena
+    @Override
+    public String toString() {
+        return "Producto: " +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio;
+    }
+}
+```
+
+- ### Interefaz
+
+```java
+public interface CRUDInterface {
+
+    @GET("api")
+    Call<List<Producto>> getAllProducts();
+}
+```
+
+## Implementación
+
+Este fragmento de código corresponde a la implementación de un `Fragment` en Android para consumir una API REST que gestiona productos. El objetivo es obtener la lista de productos desde el servidor y mostrarla o realizar operaciones adicionales en la interfaz de usuario.
+
+### Funcionalidad Principal
+
+1. **Método `onCreate`:** Se llama al método `getAllProducts` al crear el fragmento. Este método se encarga de realizar la solicitud a la API para obtener todos los productos.
+
+2. **Método `onCreateView`:** Infla el diseño del fragmento (`R.layout.fragment_api`) y lo retorna como la vista del fragmento.
+
+3. **Método `getAllProducts`:** Utiliza Retrofit para realizar una solicitud HTTP GET a la API que proporciona la lista de productos. La URL base está definida como `http://192.168.153.1:8080/`. Se implementan callbacks para manejar las respuestas exitosas y los posibles errores.
+
+4. **Callback `onResponse`:** En caso de una respuesta exitosa, se procesa la lista de productos recibida y se registran en el log.
+
+5. **Callback `onFailure`:** En caso de error, se registra un mensaje de error en el log.
+
+## Configuración de Retrofit
+
+Retrofit es una biblioteca de cliente HTTP para Android y Java que simplifica la comunicación con servicios web RESTful. En este código, se configura Retrofit con la URL base del servidor y el convertidor Gson para manejar los datos en formato JSON.
+
+```java
+Retrofit retrofit = new Retrofit.Builder()
+        .baseUrl("http://192.168.153.1:8080/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build();
+```
+
+
 ## Recursos utilizados
 
 - [Guía de Diseño de Android](https://developer.android.com/design)
